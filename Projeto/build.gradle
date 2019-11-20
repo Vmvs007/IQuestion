@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id 'idea' // optional (to generate IntelliJ IDEA project files)
+}
+
+repositories {
+    mavenCentral()
+    flatDir{dir 'lib'}
+}
+
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
+    compile name:'ES2_TP1_1920'
+    
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
