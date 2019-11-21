@@ -1,0 +1,46 @@
+[
+    {
+        "type": "MultipleChoice",
+        "question": {
+            "title": "Question 1",
+            "question_description": "The ability of an object to take on many forms is:",
+            "options": [
+                "Polymorphism",
+                "Encapsulation",
+                "Design Patter",
+                "Does not Exist"
+            ],
+            "correct_answer": "Polymorphism"
+        }
+    },
+    {
+        "type": "MultipleChoice",
+        "question": {
+            "title": "Question 2",
+            "question_description": "The bundling of data with the methods that operate on that data is:",
+            "options": [
+                "Polymorphism",
+                "Encapsulation",
+                "Design Patter",
+                "Does not Exist"
+            ],
+            "correct_answer": "Encapsulation"
+        }
+    },
+    {
+        "type": "YesNo",
+        "question": {
+            "title": "Question 3",
+            "question_description": "Object Oriented Programming is exclusive to the JAVA programming language",
+            "correct_answer": "no"
+        }
+    },
+    {
+        "type": "Numeric",
+        "question": {
+            "title": "Question 4",
+            "question_description": "How many programming languages are taught in Paradigmas de Programação?",
+            "correct_answer": "1"
+        }
+    }
+]
