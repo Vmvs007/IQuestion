@@ -19,13 +19,13 @@ public class removeQuestion {
     }
 
     @Test // remover uma pergunta na posição 0 do Test
-    public void testCase2() throws TestException {
+    public void testCase1() throws TestException {
         sistema.addQuestion(q1);
         assertEquals(true, sistema.removeQuestion(0));
     }
 
     @Test // remover uma pergunta na posição 1 do Test
-    public void testCase3() throws TestException {
+    public void testCase2() throws TestException {
         sistema.addQuestion(q1);
         sistema.addQuestion(q1);
         assertEquals(true, sistema.removeQuestion(1));
@@ -33,7 +33,7 @@ public class removeQuestion {
     }
 
     @Test // remover uma pergunta na posição 98
-    public void testCase4() throws TestException {
+    public void testCase3() throws TestException {
         int i;
         for (i = 0; i < 99; i++) {
             sistema.addQuestion(q1);
@@ -43,7 +43,7 @@ public class removeQuestion {
     }
 
     @Test // remover uma pergunta na posição 99
-    public void testCase5() throws TestException {
+    public void testCase4() throws TestException {
         int i;
         for (i = 0; i < 100; i++) {
             sistema.addQuestion(q1);
@@ -56,15 +56,10 @@ public class removeQuestion {
 
     @Test
     // Remover uma pergunta na posição 0 mas a posição está vazia
-    public void testCase7() throws TestException{
+    public void testCase5() throws TestException{
         assertEquals(false, sistema.removeQuestion(0));
     }
 
-    @Test
-    // Remover uma pergunta na posição 0 mas a posição está vazia
-    public void testCase8() throws TestException{
-        sistema.addQuestion(q1);
-        assertEquals(false, sistema.isComplete());
-    }
+
 
 }

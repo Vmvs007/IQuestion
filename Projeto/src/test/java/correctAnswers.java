@@ -57,7 +57,28 @@ public class correctAnswers {
         ((QuestionYesNo) q2).setUser_answer("Yes");
         sistema.addQuestion(q1);
         sistema.addQuestion(q2);
-
         assertEquals(2,statistics.correctAnswers().length);
+    }
+
+    @Test //Test com 99 questões e todas certas
+    public void testCase5() throws TestException {
+        int i;
+        ((QuestionYesNo) q1).setUser_answer("Yes");
+        for(i = 0;i<99;i++){
+            sistema.addQuestion(q1);
+        }
+
+        assertEquals(99,statistics.correctAnswers().length);
+    }
+
+    @Test //Test com 100 questões e todas certas
+    public void testCase6() throws TestException {
+        int i;
+        ((QuestionYesNo) q1).setUser_answer("Yes");
+        for(i = 0;i<100;i++){
+            sistema.addQuestion(q1);
+        }
+
+        assertEquals(100,statistics.correctAnswers().length);
     }
 }

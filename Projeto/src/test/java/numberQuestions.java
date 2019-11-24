@@ -31,7 +31,7 @@ public class numberQuestions {
         assertEquals(1,sistema.numberQuestions());
     }
 
-    @Test// Numero de questões quando o teste tem 99 questão
+    @Test// Numero de questões quando o teste tem 99 questões
     void testCase3() throws TestException {
         int i;
         for(i=0;i<99;i++) {
@@ -40,7 +40,7 @@ public class numberQuestions {
         assertEquals(99,sistema.numberQuestions());
     }
 
-    @Test// Numero de questões quando o teste tem 100 questão
+    @Test// Numero de questões quando o teste tem 100 questões
     void testCase4() throws TestException {
         int i;
         for(i=0;i<100;i++) {
