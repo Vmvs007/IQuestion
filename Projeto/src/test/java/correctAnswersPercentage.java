@@ -61,4 +61,30 @@ public class correctAnswersPercentage {
         statistics=(TestStatistics)sistema.getTestStatistics();
         assertEquals(1.0,statistics.correctAnswerPecentage());
     }
+
+    @Test //Test com 100 questoes, 99 certas e 1 errada
+    public void testCase5() throws TestException {
+        int i;
+        ((QuestionYesNo) q1).setUser_answer("Yes");
+        ((QuestionYesNo) q2).setUser_answer("No");
+        for(i=0;i<99;i++){
+            sistema.addQuestion(q1);
+        }
+        sistema.addQuestion(q2);
+        statistics=(TestStatistics)sistema.getTestStatistics();
+        assertEquals(0.99,statistics.correctAnswerPecentage());
+    }
+
+    @Test //Test com 100 questoes, 1 certa e 99 erradas
+    public void testCase6() throws TestException {
+        int i;
+        ((QuestionYesNo) q1).setUser_answer("No");
+        ((QuestionYesNo) q2).setUser_answer("Yes");
+        for(i=0;i<99;i++){
+            sistema.addQuestion(q1);
+        }
+        sistema.addQuestion(q2);
+        statistics=(TestStatistics)sistema.getTestStatistics();
+        assertEquals(0.01,statistics.correctAnswerPecentage());
+    }
 }

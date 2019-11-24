@@ -60,4 +60,24 @@ public class incorrectAnswers {
 
         assertEquals(0,statistics.incorrectAnswers().length);
     }
+
+    @Test //Test com 99 questões todas erradas
+    public void testCase5() throws TestException {
+        int i;
+        ((QuestionYesNo) q1).setUser_answer("No");
+        for(i=0;i<99;i++){
+            sistema.addQuestion(q1);
+        }
+        assertEquals(99,statistics.incorrectAnswers().length);
+    }
+
+    @Test //Test com 100 questões todas erradas
+    public void testCase6() throws TestException {
+        int i;
+        ((QuestionYesNo) q1).setUser_answer("No");
+        for(i=0;i<100;i++){
+            sistema.addQuestion(q1);
+        }
+        assertEquals(100,statistics.incorrectAnswers().length);
+    }
 }
